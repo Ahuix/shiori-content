@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shiori 栞 · Japanese stories, one episode at a time</title>
+<meta name="description" content="Graded Japanese stories from beginner (N5) to advanced (N1), with recorded voices, furigana, a tap-to-look-up dictionary, grammar notes and English and Chinese translations.">
+<meta name="theme-color" content="#F1F3EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111923" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Shiori">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:title" content="Shiori 栞">
+<meta property="og:description" content="Japanese stories, one episode at a time.">
+<meta property="og:image" content="icons/icon-512.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap">
+<style>
+  /* The web version of the Shiori app (the app draws every screen). These tokens
+     only paint the page behind it so both themes load without a flash. */
+  :root { --paper: #F1F3EE; --ink: #1D2B3A; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #111923; --ink: #E6E3D9; color-scheme: dark; } }
+  :root[data-theme="dark"] { --paper: #111923; --ink: #E6E3D9; color-scheme: dark; }
+  html { box-sizing: border-box; height: 100%; background: var(--paper); }
+  *, *::before, *::after { box-sizing: inherit; }
+  /* keep clear of the notch and home bar when added to the home screen */
+  body { height: 100%; margin: 0; overflow: hidden; background: var(--paper); color: var(--ink);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+  #root { display: flex; height: 100%; flex: 1; }
+  :focus-visible { outline: 2px solid #5E9488; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
